@@ -1,8 +1,7 @@
 import Acoes from "./Acoes";
 
 export default function Fundo(props){
-    console.log(props.likedText)
-    
+
     return(
         <div class="fundo">
             <Acoes />

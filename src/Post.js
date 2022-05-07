@@ -2,6 +2,7 @@ import Topo from "./Topo";
 import Fundo from "./Fundo";
 
 export default function Post(props){
+
     return(
         <div class="post">
             <Topo perfilImage={props.perfilImage} perfilName={props.perfilName}/>
