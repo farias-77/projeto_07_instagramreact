@@ -1,18 +1,16 @@
 import React from "react";
 
-export default function Acoes(){
-
-    const [like, setLike] = React.useState(0);
+export default function Acoes(props){
     
-    function likesPost(){
-        setLike(1);
+    function likesPostaux(){
+        props.likesPost();
     }
 
-    function unlikesPost(){
-        setLike(0);
+    function unlikesPostaux(){
+        props.unlikesPost();
     }
 
-    let heart = like === 0 ? <ion-icon name="heart-outline" onClick={likesPost}></ion-icon> : <ion-icon name="heart" class="liked" onClick={unlikesPost}></ion-icon>;
+    let heart = props.likeStatus === "0" ? <ion-icon name="heart-outline" onClick={likesPostaux}></ion-icon> : <ion-icon name="heart" class="liked" onClick={unlikesPostaux}></ion-icon>;
     
     return (
         <div class="acoes">

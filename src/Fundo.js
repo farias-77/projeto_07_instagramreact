@@ -1,10 +1,9 @@
 import Acoes from "./Acoes";
 
 export default function Fundo(props){
-
     return(
         <div class="fundo">
-            <Acoes />
+            <Acoes likesPost={props.likesPost} unlikesPost={props.unlikesPost} likeStatus={props.likeStatus}/>
             <div class="curtidas">
                 <img src={props.likedImage} />
                 <div class="texto">
